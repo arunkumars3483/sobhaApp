@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/potrait_formbg"
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80ffffff"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="60dp"
+            >
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="#111111"
+                    android:hint="Name"
+                    android:nextFocusForward="@+id/input_phone"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="IN"/>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="Contact Number" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp_optional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="IN"/>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_phone_optional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_phone_optional"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="Optional Number" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/hint_email" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|left"
+                    android:singleLine="false"
+                    android:minLines="3"
+                    android:maxLines="8"
+                    android:hint="Current Residence Location:"
+                    android:nextFocusForward="@+id/input_sobha_employee"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_sobha_employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/input_sobha_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="#111111"
+                    android:hint="Name of the Sobha Employee Serviced:"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="22sp"
+                android:textColor="#111111"
+                android:text="1. How did you know about Sobha Limited?"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/radioGroupSobhaLtd">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sobha Website"
+                    android:id="@+id/radioButtonWebsite"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Portals "
+                    android:id="@+id/radioButtonPortals"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoardings"
+                    android:id="@+id/radioButtonHoardings"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Newspaper"
+                    android:id="@+id/radioButtonNewspaper"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reference"
+                    android:id="@+id/radioButtonReference"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:id="@+id/radioButtonOthers"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+            </RadioGroup>
+            <EditText
+                android:id="@+id/input_other_heard_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#111111"
+                android:hint="Others"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="22sp"
+                android:textColor="#111111"
+                android:text="2. Your Purpose of looking for a property with Sobha Limited?"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/radioGroupPurpose">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Investment"
+                    android:id="@+id/radioButtonInvestment"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End use"
+                    android:id="@+id/radioButtonEndUse"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="22sp"
+                android:textColor="#111111"
+                android:text="3. How do you feel the Model apartment at the Site?"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/radioGroupFeel">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:id="@+id/radioButtonExcellent"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good"
+                    android:id="@+id/radioButtonGood"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can be improved"
+                    android:id="@+id/radioButtonImprove"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/input_feel_dissatisfication_container"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:textColor="#111111"
+                    android:text="Where was the dissatisfaction?"
+                    />
+                <EditText
+                    android:id="@+id/input_feel_dissatisfication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="7"
+                    android:textColor="#111111"
+                    android:layout_marginBottom="8dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="22sp"
+                android:textColor="#111111"
+                android:text="4. How was the Site Visit Process?"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/radioGroupHow">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:id="@+id/radioButtonHowExcellent"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good"
+                    android:id="@+id/radioButtonHowGood"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can be improved"
+                    android:id="@+id/radioButtonHowImprove"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/input_how_dissatisfication_container"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:textColor="#111111"
+                    android:text="Where was the dissatisfaction?"
+                    />
+                <EditText
+                    android:id="@+id/input_how_dissatisfication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:maxLines="7"
+                    android:textColor="#111111"
+                    android:layout_marginBottom="8dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="22sp"
+                android:textColor="#111111"
+                android:text="5. Preferred type of home: "
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VILLA"
+                    android:id="@+id/radioButton"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="APARTMENT"
+                    android:id="@+id/radioButton2"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTHERS"
+                    android:id="@+id/radioButton3"
+                    android:checked="false"
+                    android:textColor="#111111"
+                    android:textSize="18sp"
+                    />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:id="@+id/plot_size_container"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="22sp"
+                    android:textColor="#111111"
+                    android:text="6. Preffered Size of home: "
+                    />
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:entries="@array/type_sizes"
+                    android:prompt="@string/size_prompt" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:id="@+id/flat_type_container"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="22sp"
+                    android:textColor="#111111"
+                    android:text="6. Preffered type of Unit: "/>
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:entries="@array/apartment_types"
+                    android:prompt="@string/apartment_prompt" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:id="@+id/others_container"
+                android:visibility="visible"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="22sp"
+                    android:textColor="#111111"
+                    android:text="7. Choose Budget"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+
+                    android:entries="@array/budget_types"
+                    android:prompt="@string/budget_prompt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="22sp"
+                    android:textColor="#111111"
+                    android:text="8. Funding by?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:id="@+id/radioGroupFunding">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self"
+                        android:id="@+id/radioButtonSelf"
+                        android:checked="false"
+                        android:textColor="#111111"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank loan"
+                        android:id="@+id/radioButtonBank"
+                        android:checked="false"
+                        android:textColor="#111111"
+                        android:textSize="18sp"
+                        />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="22sp"
+                    android:textColor="#111111"
+                    android:text="9. Expected time to purchase?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:id="@+id/radioGroupPurchase">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Less than 1 month "
+                        android:id="@+id/radioButtonMonth"
+                        android:checked="false"
+                        android:textColor="#111111"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1- 3 month"
+                        android:id="@+id/radioButtonMediumMonth"
+                        android:checked="false"
+                        android:textColor="#111111"
+                        android:textSize="18sp"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Greater than 3 month"
+                        android:id="@+id/radioButtonMoreMonth"
+                        android:checked="false"
+                        android:textColor="#111111"
+                        android:textSize="18sp"
+                        />
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:minLines="2"
+                        android:hint="10. STM/GRE remarks:" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_sign_up"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+

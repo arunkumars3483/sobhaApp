@@ -20,5 +20,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button navigateToSiteVisitForm = (Button)findViewById(R.id.button_fill_site_form_page);
+        navigateToSiteVisitForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, SiteVisitFormActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

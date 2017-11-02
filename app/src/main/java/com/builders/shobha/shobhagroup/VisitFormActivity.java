@@ -50,7 +50,8 @@ public class VisitFormActivity extends AppCompatActivity {
     EditText dateSelected;
     Dialog dialog;
     String name="", phone="", email_id="", type_home="", unit_type="", budget="", activity="", remarks="", site_visit_date="";
-    String send_email = "sales.coimbatore@sobha.com";
+    //String send_email = "sales.coimbatore@sobha.com";
+    String send_email = "arunkumars3483@gmail.com";
     RadioGroup rGroup;
     CountryCodePicker ccp;
     @Override
