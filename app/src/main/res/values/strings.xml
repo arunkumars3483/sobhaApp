@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Sobha Limited</string>
+    <string name="hint_name">Customer Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_activity">Activity</string>
+    <string name="hint_remarks">Remarks</string>
+    <string name="btn_sign_up">Submit</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_phone">Enter the phone number</string>
+
+    <string name="size_prompt">Choose a size</string>
+    <string name="apartment_prompt">Choose apartment type</string>
+    <string name="budget_prompt">Choose Budget</string>
+
+    <string-array name="type_sizes">
+        <item>5 – 7 Cents (2770-2846 sq.ft)</item>
+        <item>8 -10 Cents (3194-3194 sq.ft)</item>
+        <item>11-13 Cents (4023 sq.ft)</item>
+        <item>14-15 Cents (4023-4048 sq.ft)</item>
+    </string-array>
+    <string-array name="apartment_types">
+        <item>1 BHK</item>
+        <item>1.5 BHK</item>
+        <item>2 BHK</item>
+        <item>2.5 BHK</item>
+        <item>3 BHK</item>
+        <item>3.5 BHK</item>
+    </string-array>
+    <string-array name="budget_types">
+        <item>Choose Budget</item>
+        <item>Less than 50 L</item>
+        <item>50-80 L</item>
+        <item>80-1 Cr</item>
+        <item>1- 2 Cr</item>
+        <item>2-4 Cr</item>
+    </string-array>
+    <string-array name="budget_types_apartmnent">
+        <item>Choose Budget</item>
+        <item>Less than 50 L</item>
+        <item>50-60 L</item>
+        <item>60-70 L</item>
+        <item>70-80 L</item>
+        <item>80-90 L</item>
+        <item>90L - 1Cr</item>
+        <item>1-1.2 Cr</item>
+    </string-array>
+    <string-array name="budget_types_villa">
+        <item>Choose Budget</item>
+        <item>1-2 Cr</item>
+        <item>2-2.5 Cr</item>
+        <item>2.5-3 Cr</item>
+        <item>3-4 Cr</item>
+    </string-array>
+    <string-array name="budget_types_others">
+        <item>Choose Budget</item>
+        <item>1-1.5 Cr</item>
+        <item>1.5-2 Cr</item>
+        <item>2-2.5 Cr</item>
+        <item>2.5-3.5 Cr</item>
+    </string-array>
+</resources>
