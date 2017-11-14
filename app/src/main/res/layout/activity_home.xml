@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/potrait_frontbg"
+    android:background="@drawable/potrait_frontbgnew"
     tools:context="com.builders.shobha.shobhagroup.HomeActivity">
 
     <Button
@@ -16,7 +16,7 @@
         android:textColor="#337ab7"
         android:padding="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="45dp"
         android:layout_marginRight="12dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="12dp"

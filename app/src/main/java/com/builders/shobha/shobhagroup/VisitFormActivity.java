@@ -50,8 +50,10 @@ public class VisitFormActivity extends AppCompatActivity {
     EditText dateSelected;
     Dialog dialog;
     String name="", phone="", email_id="", type_home="", unit_type="", budget="", activity="", remarks="", site_visit_date="";
-    //String send_email = "sales.coimbatore@sobha.com";
-    String send_email = "arunkumars3483@gmail.com";
+    String send_email = "sales.coimbatore@sobha.com";
+    //String send_email = "dilzsebastian@gmail.com";
+    //String send_email = "arunkumars3483@gmail.com";
+    String api_key = "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";
     RadioGroup rGroup;
     CountryCodePicker ccp;
     @Override
@@ -201,7 +203,7 @@ public class VisitFormActivity extends AppCompatActivity {
         protected Void doInBackground(String... urls) {
 
             try {
-                SendGrid sendgrid = new SendGrid("shobha_group", "005qwert005");
+                SendGrid sendgrid = new SendGrid( api_key);
 
                 SendGrid.Email email = new SendGrid.Email();
 
